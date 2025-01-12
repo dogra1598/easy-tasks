@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 // CSS RESET
-* {
-  padding: 0;
-  margin: 0;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
   font-size: 62.5%;
 }
 
@@ -26,4 +30,50 @@ button {
   margin: 0;
   background-color: transparent;
   font-family: initial;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-family: initial;
+}
+
+// Animations
+@keyframes openDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }

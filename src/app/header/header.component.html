@@ -3,20 +3,27 @@
     <div class="header__title-section__primary">
       <h1 class="header__title-section__primary__text">EasyTasks</h1>
       <div class="header__title-section__primary__img-container">
-        <img src="logo.svg" alt="Logo" class="header__title-section__primary__img-container__img">
+        <img
+          src="logo.svg"
+          alt="Logo"
+          class="header__title-section__primary__img-container__img"
+        />
       </div>
     </div>
-    <p class="header__title-section__sub-title">"Streamline Your Day, One Task at a Time"</p>
+    <p class="header__title-section__sub-title">
+      "Streamline Your Day, One Task at a Time"
+    </p>
   </div>
   <div class="header__btns">
     <button class="header__btns__new-task">Create New Task</button>
     <button class="header__btns__user" (click)="onOpenUserDropdown()">
-      <i class="fa-solid fa-user"></i>
+      <img src="user.svg" alt="user" class="header__btns__user__img" />
+      
       @if (showDropdown) {
-        <div class="user-dropdown">
-          <p class="user-dropdown__my-profile">My Profile</p>
-          <p class="user-dropdown__logout">Logout</p>
-        </div>
+      <div class="user-dropdown">
+        <p class="user-dropdown__my-profile">My Profile</p>
+        <p class="user-dropdown__logout">Logout</p>
+      </div>
       }
     </button>
   </div>
