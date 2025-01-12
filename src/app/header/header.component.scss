@@ -1,12 +1,14 @@
 .header {
   background-color: #212529;
   border-radius: 1rem;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   &__title-section {
+    animation: moveFromLeft 0.5s;
+
     &__primary {
       display: flex;
       align-items: center;
@@ -49,7 +51,7 @@
       border-radius: 100rem;
       font-weight: 500;
       color: #212529;
-      margin-right: 1rem;
+      margin-right: 2rem;
       cursor: pointer;
       letter-spacing: 0.1rem;
       transition: all 0.2s;
@@ -111,6 +113,30 @@
   0% {
     opacity: 0;
     transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
   }
 
   100% {
